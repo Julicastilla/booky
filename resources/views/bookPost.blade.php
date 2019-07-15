@@ -23,9 +23,11 @@
 
                 <ul class="list-group list-group-flush">
 
-                  @if($usuarioLog->id !== $book->user_id)
-                  <li class="list-group-item">Compartido por:<a style="color:#18867a; font-weight:bolder"  href="/profile"> {{$book->user->name}} </a> </li>
-                @endif
+                  @if($usuarioLog->id!=$book->user_id)
+               <li class="list-group-item">Compartido por:<a style="color:#18867a; font-weight:bolder"  href="/normalProfile/{{$book->user_id}}"> {{$book->user->name}} </a> </li>
+               @else
+                <li class="list-group-item">Compartido por:<a style="color:#18867a; font-weight:bolder"  href="/profile"> {{$book->user->name}} </a> </li>
+               @endif
             @if (Auth::User()->id !== $book->user_id)
                 @if ($book->state_id == 1)
                 <li class="list-group-item"> ¡Disponible! <a href="/solicitar/{{$book->id}}" class="btn btn-success m-2">Solicitar</a></li>
