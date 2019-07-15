@@ -72,8 +72,8 @@ Route::post('/editProfile', 'userController@edit');
 
 
 // Route::get('/install', function(){
-//     Artisan::call("storage:link"),
-//     Artisan::call("migrate")
+//     Artisan::call("storage:link");
+//     Artisan::call("migrate");
 // });
 //PARA EL ACCESO DIRECTO A STORAGE LINK
 //UTILIZARLA UNA VEZ Y DESPUES COMENTARLA
