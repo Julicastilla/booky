@@ -24,7 +24,7 @@
   @endif
 <div class="">
   <div class="card col-lg-8 p-4 m-3 mx-auto" style="background-color:rgba(255,255,255,0.5)">
-    <h2 class="mb-2">Libros disponibless</h2>
+    <h2 class="mb-2">Libros disponibles</h2>
     @forelse ($books as $book)
       <div class="card col-lg-10 mx-auto row pt-2 pb-4 my-2 post">
         <div class="card-body col-12 row pb-3">
