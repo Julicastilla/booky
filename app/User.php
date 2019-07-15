@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','user_id', 'image'
     ];
 
     /**
@@ -36,4 +36,20 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function books(){
+      return $this->hasMany('App\Book', 'book_id');
+    }
+
+    public function follows() {
+        return $this->hasMany(Follow::class);
+    }
+    public function isFollowing($target_id)
+    {
+        return (bool)$this->follows()->where('target_id', $target_id)->first(['id']);
+    }
+    public function posts(){
+      return $this->hasMany('App\Post', 'user_id');
+    }
+    
 }
