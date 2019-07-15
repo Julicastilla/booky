@@ -1,0 +1,994 @@
+/*reseteos*/
+
+*{
+box-sizing: border-box;
+}
+html.login-reg{
+font-size: 24px;
+}
+ul, ol{
+padding: 0;
+margin: 0;
+list-style-type: none;
+}
+a{
+text-decoration: none;
+}
+h1, h2{
+text-align: center;
+margin: 0;
+padding: 0;
+}
+/* estilos generales, register y login*/
+
+body{
+margin: 0 auto;
+font-family: 'Poiret One', cursive;
+min-height: 100%;
+display: flex;
+flex-direction: column;
+
+}
+.container{
+background-color: #fff;
+}
+h2{
+margin: 0;
+font-size: 30px;
+font-weight: 900;
+}
+header{
+width: 100%;
+padding: 10px 15px 10px;
+display: flex;
+flex-direction: row;
+justify-content: flex-start;
+align-items:flex-end;
+}
+header img{
+display: block;
+width: 50px;
+height: 50px;
+padding-top: 0px;
+}
+header h1{
+position: relative;
+top: 7px;
+padding: 0 20px 0 20px;
+}
+header h2{
+display: none;
+padding: 0 5px;
+position: relative;
+top: 2px;
+}
+header p{
+display: none;
+margin: 0;
+}
+header p a{
+color: #188c7a;
+font-size: 20px;
+
+}
+header nav a{
+color: #fff;
+font-size: 40px;
+color: #188c7a;
+}
+header nav{
+width: 100%;
+color: #188c7a;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+header nav.menu-header{
+display: none;
+}
+header nav.menu-header a{
+font-size: 30px;
+}
+header a{
+color: #fff;
+font-size: 50px;
+color: #188c7a;
+}
+.cont-form{
+width: 85%;
+color: #000;
+border-radius: 5px;
+text-align: center;
+margin: 0px auto;
+}
+form h2{
+margin: 10px 0 25px;
+padding: 0;
+color: #000;
+text-align: center;
+}
+form i{
+color: #188c7a;
+}
+.datos input{
+font-size: 16px;
+background-color: #fff;
+display: inline-block;
+border-radius: 5px;
+margin: 0 0 20px;
+padding-left: 10px;
+line-height: 50px;
+width: 85%;
+font-family: 'Poiret One', cursive;
+}
+.check input{
+font-size: 30px;
+width: 15px;
+height: 15px;
+}
+.check label{
+font-size: 25px;
+}
+.btn-login{
+display: block;
+background-color: #188c7a;
+box-shadow: 2px 2px 3px #a4a4a4;
+border-radius: 5px;
+width: 70%;
+line-height: 55px;
+border: 0;
+font-family: 'Poiret One', cursive;
+color: #fff;
+font-size: 26px;
+margin: 15px auto;
+font-weight: bold;
+}
+.btn-login:hover{
+background-color: #424242;
+}
+.registrarte{
+display: block;
+background-color: #188c7a;
+box-shadow: 2px 2px 3px #a4a4a4;
+border-radius: 5px;
+width: 70%;
+line-height: 55px;
+border: 0;
+font-family: 'Poiret One', cursive;
+color: #fff;
+font-size: 26px;
+margin: 15px auto 35px;
+font-weight: bold;
+}
+.registrarte:hover{
+background-color: #424242;
+}
+.politica {
+font-size: 15px;
+}
+
+.login h2{
+color: #000;
+}
+hr{
+margin: 10px;
+}
+.datos-alt h2{
+margin: 0;
+padding: 0 0 5px;
+}
+.datos-alt button{
+display: inline;
+color: #fff;
+border-radius: 5px;
+border: 0;
+width: 50%;
+margin:10px auto;
+box-shadow: 2px 2px 3px #a4a4a4;
+line-height: 30px;
+font-size: 14px;
+
+}
+.datos-alt button:hover{
+font-weight: bold;
+}
+.face{
+background-color: #3b5998;
+}
+.google{
+background-color: #db4a39;
+}
+.recover{
+padding-bottom: 15px;
+}
+.recover p{
+text-align: center;
+margin: 0 0 10px;
+font-size: 14px;
+color: #000;
+}
+.recover a{
+color: #188c7a;
+}
+.recover a:hover{
+color: #188c7a;
+font-weight: bold;
+}
+footer{
+background-color: #188c7a;
+color: #fff;
+width: 100%;
+line-height: 40px;
+position: absolute;
+bottom: 0;
+}
+footer ul{
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: space-around;
+}
+footer a{
+color: #fff;
+font-size: 18px;
+}
+footer a:hover{
+font-weight: bold;
+}
+          /*errores*/
+
+p.errores {
+color: red;
+margin-top: 0;
+font-size: 15px;
+text-align: left;
+margin-left: 12%;
+}
+input.campos-con-errores{
+  margin-bottom: 0;
+}
+input#user.campos-con-errores{
+  margin-bottom: 0;
+}
+input#email.campos-con-errores{
+  margin-bottom: 0;
+}
+input#pass.campos-con-errores{
+  margin-bottom: 0;
+}
+
+
+
+          /*estilos home*/
+
+.navbar{
+background-color: #18867a !important;
+padding: 8px 10px;
+color: #fff;
+font-size: 18px;
+display: flex;
+flex-direction: row;
+align-items: flex-end;
+}
+.navbar img{
+display: block;
+width: 50px;
+height: 50px;
+}
+.navbar a{
+color: #fff !important;
+}
+.container nav a{
+color: #000 !important;
+}
+.blanco{
+background-color: rgba(255, 255, 255, 0.8);
+padding: 50px;
+}
+.bienvenido h2{
+background-color: rgba(255, 255, 255, 0.8);
+text-align: left;
+padding: 5px 100px;
+}
+#search {
+justify-content: center;
+margin: 50px 5px 50px;
+}
+.btn{
+line-height: 25px;
+}
+.fondo{
+min-height: 100px;
+background-image: url(../img/libros2.jpg);
+background-size: 100%;
+}
+.jumbotron {
+line-height: 50px;
+width: 100%;
+text-align: center;
+font-weight: bold;
+font-size: 18px;
+color: #000;
+margin: 0 auto 30px;
+background-color: rgba(255, 255, 255, 0.8);
+padding-left: 20px;
+padding-right: 20px;
+}
+.paral {
+min-height: 80px;
+background-attachment: fixed;
+background-size: cover;
+background-position: 50% 50%;
+}
+.container .pasos {
+text-align: center;
+}
+
+.text-center {
+margin-bottom: 60px;
+}
+
+#carouselContent {
+margin: 50px auto 0;
+color: #18867a;
+font-size: 26px;
+font-weight: bold;
+width: 80%;
+text-align: center;
+}
+div.pasos{
+background-color: #a4a4a4;
+color: #fff;
+}
+
+div.paso{
+border-left: inset;
+padding-top: 40px;
+}
+div.paso:first-child{
+border-left: 0;
+}
+.destacado{
+margin: 40px 0 0;
+font-size: 45px;
+color: #18867a;
+font-weight: bold;
+text-align: center;
+margin: 5px 0;
+}
+.row.libros{
+padding: 20px 20px;
+}
+.libros{
+background-color: #18867a;
+text-align: center;
+margin: 15px 0;
+}
+.libros img{
+height: 100%;
+width: 80%;
+}
+.conocenos{
+background-color: #c7c7c7;
+}
+.conocenos p{
+font-size: 24px;
+font-weight: bold;
+text-align: justify;
+}
+.card{
+border: 0;
+padding: 20px;
+background-color: #c7c7c7;
+}
+.card-text, .card-body{
+background-color: #c7c7c7;
+border: 0;
+}
+.img-conocenos img{
+width: 100%;
+text-align: center;
+}
+
+
+@media only screen and (min-width: 480px){
+html.login-reg{
+font-size: 30px;
+}
+header nav.cont-logo{
+display: flex;
+justify-content: flex-start;
+}
+header p{
+display: inline-block;
+font-size: 20px;
+width: 86%;
+}
+.separador h2{
+font-size: 36px;
+}
+form.form-login{
+margin: 0px auto;
+border: 1px solid #c7c7c7;
+box-shadow: 5px 5px 10px #c7c7c7;
+}
+form h2{
+margin-bottom: 0;
+padding: 20px 0;
+line-height: 50px;
+}
+.datos input{
+margin: 0 0 20px;
+}
+
+.check input{
+width: 18px;
+height: 18px;
+}
+form.form-login{
+margin: 20px auto 25px;
+width: 80%;
+line-height: 60px;
+}
+.datos-alt h2{
+font-size: 25px;
+}
+.datos-alt button{
+display: inline;
+margin: 10px auto 20px;
+width: 40%;
+line-height: 44px;
+font-size: 20px;
+}
+hr{
+display: none;
+}
+
+@media only screen and (min-width: 990px) {
+html.login{
+font-size: 20px;
+}
+header{
+margin: 0 0 10px;
+}
+header h2{
+color: #fff;
+font-size: 26px;
+}
+header p{
+width: 40%;
+font-size: 18px;
+}
+.cont-form{
+margin: 0 auto;
+width: 70%;
+background-image: url(../img/libros9.jpg);
+background-size: cover;
+}
+.cont-reg{
+background-image: url(../img/libros3.jpg);
+}
+form.form-login{
+border-radius: 0;
+background-color: rgba(255, 255, 255, 0.8);
+width: 45%;
+margin: 0 0 0 auto;
+border: 1px solid #c7c7c7;
+box-shadow: 5px 5px 10px #c7c7c7;
+}
+form h2{
+margin-bottom: 0;
+padding: 20px 0;
+line-height: 50px;
+}
+form p{
+line-height: 20px;
+}
+.datos input{
+font-size: 20px;
+}
+.check label{
+font-size: 20px;
+}
+hr{
+display: none;
+}
+.navbar{
+padding: 8px 90px;
+}
+.conocenos p{
+padding: 50px;
+font-size: 24px;
+font-weight: bold;
+text-align: center;
+}
+
+}                      /*reseteos*/
+
+*{
+  box-sizing: border-box;
+}
+html.login-reg{
+  font-size: 24px;
+}
+ul, ol{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+}
+h1, h2{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+          /* estilos generales, register y login*/
+
+body{
+  margin: 0 auto;
+  font-family: 'Poiret One', cursive;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+.container{
+  background-color: #fff;
+}
+h2{
+  margin: 0;
+  font-size: 30px;
+  font-weight: 900;
+}
+header{
+ width: 100%;
+ padding: 10px 15px 10px;
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-start;
+ align-items:flex-end;
+}
+header img{
+  display: block;
+  width: 50px;
+  height: 50px;
+  padding-top: 0px;
+}
+header h1{
+  position: relative;
+  top: 7px;
+  padding: 0 20px 0 20px;
+}
+header h2{
+  display: none;
+  padding: 0 5px;
+  position: relative;
+  top: 2px;
+}
+header p{
+  display: none;
+  margin: 0;
+}
+header p a{
+  color: #188c7a;
+  font-size: 20px;
+
+}
+header nav a{
+  color: #fff;
+  font-size: 40px;
+  color: #188c7a;
+}
+header nav{
+  width: 100%;
+  color: #188c7a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav.menu-header{
+  display: none;
+}
+header nav.menu-header a{
+  font-size: 30px;
+}
+header a{
+  color: #fff;
+  font-size: 50px;
+  color: #188c7a;
+}
+.cont-form{
+  width: 85%;
+  color: #000;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0px auto;
+}
+form h2{
+  margin: 10px 0 25px;
+  padding: 0;
+  color: #000;
+  text-align: center;
+}
+form i{
+  color: #188c7a;
+}
+.datos input{
+  font-size: 16px;
+  background-color: #fff;
+  display: inline-block;
+  border-radius: 5px;
+  margin: 0 0 20px;
+  padding-left: 10px;
+  line-height: 50px;
+  width: 85%;
+  font-family: 'Poiret One', cursive;
+}
+.check input{
+  font-size: 30px;
+  width: 15px;
+  height: 15px;
+}
+.check label{
+  font-size: 25px;
+}
+.btn-login{
+  display: block;
+  background-color: #188c7a;
+  box-shadow: 2px 2px 3px #a4a4a4;
+  border-radius: 5px;
+  width: 70%;
+  line-height: 55px;
+  border: 0;
+  font-family: 'Poiret One', cursive;
+  color: #fff;
+  font-size: 26px;
+  margin: 15px auto;
+  font-weight: bold;
+}
+.btn-login:hover{
+  background-color: #424242;
+}
+.registrarte{
+  display: block;
+  background-color: #188c7a;
+  box-shadow: 2px 2px 3px #a4a4a4;
+  border-radius: 5px;
+  width: 70%;
+  line-height: 55px;
+  border: 0;
+  font-family: 'Poiret One', cursive;
+  color: #fff;
+  font-size: 26px;
+  margin: 15px auto 35px;
+  font-weight: bold;
+}
+.registrarte:hover{
+  background-color: #424242;
+}
+.politica {
+  font-size: 15px;
+}
+
+.login h2{
+  color: #000;
+}
+hr{
+  margin: 10px;
+}
+.datos-alt h2{
+  margin: 0;
+  padding: 0 0 5px;
+}
+.datos-alt button{
+  display: inline;
+  color: #fff;
+  border-radius: 5px;
+  border: 0;
+  width: 50%;
+  margin:10px auto;
+  box-shadow: 2px 2px 3px #a4a4a4;
+  line-height: 30px;
+  font-size: 14px;
+
+}
+.datos-alt button:hover{
+  font-weight: bold;
+}
+.face{
+  background-color: #3b5998;
+}
+.google{
+  background-color: #db4a39;
+}
+.recover{
+  padding-bottom: 15px;
+}
+.recover p{
+  text-align: center;
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: #000;
+}
+.recover a{
+  color: #188c7a;
+}
+.recover a:hover{
+  color: #188c7a;
+  font-weight: bold;
+}
+footer{
+  background-color: #188c7a;
+  color: #fff;
+  width: 100%;
+  line-height: 40px;
+  position: absolute;
+  bottom: 0;
+}
+footer ul{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+footer a{
+  color: #fff;
+  font-size: 18px;
+}
+footer a:hover{
+  font-weight: bold;
+}
+                                /*errores*/
+
+.errores {
+color: red;
+ }
+
+                                /*estilos home*/
+
+.navbar{
+background-color: #18867a !important;
+padding: 8px 10px;
+color: #fff;
+font-size: 18px;
+display: flex;
+flex-direction: row;
+align-items: flex-end;
+}
+.navbar img{
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+.navbar a{
+  color: #fff !important;
+}
+.container nav a{
+  color: #000 !important;
+}
+.blanco{
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 50px;
+}
+.bienvenido h3{
+  background-color: #18867a;
+  text-align: center;
+  padding: 5px 100px;
+  color: #fff;
+  font-size: 20px;
+}
+#search {
+  justify-content: center;
+  margin: 50px 5px 50px;
+}
+.btn{
+  line-height: 25px;
+}
+.fondo{
+  min-height: 100px;
+  background-image: url(../img/libros2.jpg);
+  background-size: 100%;
+}
+.jumbotron {
+  line-height: 50px;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  color: #000;
+  margin: 0 auto 30px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.paral {
+min-height: 80px;
+background-attachment: fixed;
+background-size: cover;
+background-position: 50% 50%;
+}
+.container .pasos {
+  text-align: center;
+}
+
+.text-center {
+  margin-bottom: 60px;
+}
+
+#carouselContent {
+  margin: 50px auto 0;
+  color: #18867a;
+  font-size: 26px;
+  font-weight: bold;
+  width: 80%;
+  text-align: center:ºº
+}
+div.pasos{
+  background-color: #a4a4a4;
+  color: #fff;
+}
+
+div.paso{
+  border-left: inset;
+  padding-top: 40px;
+}
+div.paso:first-child{
+  border-left: 0;
+}
+.destacado{
+  margin: 40px 0 0;
+  font-size: 45px;
+  color: #18867a;
+  font-weight: bold;
+  text-align: center;
+  margin: 5px 0;
+}
+.row.libros{
+  padding: 20px 20px;
+}
+.libros{
+  background-color: #18867a;
+  text-align: center;
+  margin: 15px 0;
+}
+.libros img{
+  height: 100%;
+  width: 80%;
+}
+.conocenos{
+  background-color: #c7c7c7;
+}
+.conocenos p{
+  font-size: 24px;
+  font-weight: bold;
+  text-align: justify;
+}
+.card{
+  border: 0;
+  padding: 20px;
+  background-color: #c7c7c7;
+}
+.card-text, .card-body{
+  background-color: #c7c7c7;
+  border: 0;
+}
+.img-conocenos img{
+  width: 100%;
+  text-align: center;
+}
+
+
+@media only screen and (min-width: 480px){
+    html.login-reg{
+      font-size: 30px;
+    }
+    header nav.cont-logo{
+      display: flex;
+      justify-content: flex-start;
+      }
+    header p{
+      display: inline-block;
+      font-size: 20px;
+      width: 86%;
+    }
+    .separador h2{
+      font-size: 36px;
+    }
+    form.form-login{
+      margin: 0px auto;
+      border: 1px solid #c7c7c7;
+      box-shadow: 5px 5px 10px #c7c7c7;
+    }
+    form h2{
+      margin-bottom: 0;
+      padding: 20px 0;
+      line-height: 50px;
+    }
+    .datos input{
+      margin: 0 0 20px;
+    }
+    .check input{
+      width: 18px;
+      height: 18px;
+    }
+    form.form-login{
+      margin: 20px auto 25px;
+      width: 80%;
+      line-height: 60px;
+    }
+    .datos-alt h2{
+      font-size: 25px;
+    }
+    .datos-alt button{
+      display: inline;
+      margin: 10px auto 20px;
+      width: 40%;
+      line-height: 44px;
+      font-size: 20px;
+    }
+    hr{
+    display: none;
+    }
+
+@media only screen and (min-width: 990px) {
+  html.login{
+    font-size: 20px;
+  }
+  header{
+   margin: 0 0 10px;
+  }
+  header h2{
+    color: #fff;
+    font-size: 26px;
+  }
+  header p{
+    width: 40%;
+    font-size: 18px;
+  }
+  .cont-form{
+    margin: 0 auto;
+    width: 70%;
+    background-image: url(../img/libros9.jpg);
+    background-size: cover;
+  }
+  .cont-reg{
+   background-image: url(../img/libros3.jpg);
+  }
+  form.form-login{
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 45%;
+    margin: 0 0 0 auto;
+    border: 1px solid #c7c7c7;
+    box-shadow: 5px 5px 10px #c7c7c7;
+  }
+  form h2{
+    margin-bottom: 0;
+    padding: 20px 0;
+    line-height: 50px;
+  }
+  form p{
+    line-height: 20px;
+  }
+  .datos input{
+    font-size: 20px;
+  }
+  .check label{
+    font-size: 20px;
+  }
+hr{
+  display: none;
+}
+.navbar{
+  padding: 8px 90px;
+}
+.conocenos p{
+  padding: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+}
