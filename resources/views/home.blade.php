@@ -33,8 +33,11 @@
           </div>
           <ul class="col-lg-9">
             <h5 class="card-title col-12 m-4">¡Nuevo libro disponible!</h5>
-
+           @if (Auth::user()->id !== $book->user->id)
             <li class="card-text pt-4 list-group-item"> <a href="/normalProfile/{{$book->user->id}}">{{$book->user->name}}</a> agregó
+          @else
+            <li class="card-text pt-4 list-group-item"> <a href="/profile">{{$book->user->name}}</a> agregó
+              @endif  
                "<a href="/bookPost/{{$book->id}}">{{$book->title->name}}</a>"</li>
 
             @if (Auth::user()->id !== $book->user->id)
