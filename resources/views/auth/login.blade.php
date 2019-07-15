@@ -1,67 +1,72 @@
-@extends('layouts.app')
+@extends('../master')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+@section('main')
+  {{-- <header class="header-login row">
+     <nav class="cont-logo col-lg-7 col-md-6">
+       <img src="img/logo-verde-g.png" alt="">
+       <h1 class="titulo"><a class="a-reg" href="/home">Booky</a></h1>
+      </nav>
+     <p class="col-lg-5 col-md-6">¿No estás registrado? <a class="a-reg" href="/register"> Crea una cuenta</a></p>
+  </header> --}}
+  <div class="container">
+    <div class="row cont-form">
+        <div class="col-sm-12 panel-cont">
+            <div class="panel panel-defaut offset-lg-6">
+                <div class="panel-body">
+                    <form class="form-horizontal form-login col-md-12" method="POST" action="{{ route('login') }}">
+                        {{ csrf_field() }}
+                          <h2>Ingresa</h2>
+                        <div class="datos form-group row{{ $errors->has('email') ? ' has-error' : '' }}">
+                            <label for="email" class="col-form-label d-none d-md-block"><i class="fas fa-user"></i></label>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+                            <div class="col-md-11 col-sm-12 pl-0 pr-0">
+                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="ingresa tu email" autofocus>
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                @if ($errors->has('email'))
+                                  <p>
+                                    <span class="help-block errores">
+                                        <strong>{{ $errors->first('email') }}</strong>
                                     </span>
-                                @enderror
+                                  </p>
+                                @endif
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                        <div class="datos form-group row{{ $errors->has('password') ? ' has-error' : '' }}">
+                            <label for="password" class="col-form-label d-none d-md-block"><i class="fas fa-lock"></i></label>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                            <div class="col-md-11 col-sm-12 pl-0 pr-0">
+                                <input id="password" type="password" class="form-control " name="password" placeholder="ingresa tu contraseña">
 
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
+                                @if ($errors->has('password'))
+                                  <p class="">
+                                    <span class="help-block errores">
+                                        <strong>{{ $errors->first('password') }}</strong>
                                     </span>
-                                @enderror
+                                    </p>
+                                @endif
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4 mx-auto">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Recordarme
                                     </label>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
+                        <div class="form-group recover">
+                            <div class="col-md-8 mx-auto">
+                                <button type="submit" class="btn btn-primary btn-login w-75">
+                                    Ingresa
                                 </button>
 
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
+                                <a class="btn btn-link" href="/register">
+                                    ¿Olvidaste tu contraseña?
+                                </a>
                             </div>
                         </div>
                     </form>
