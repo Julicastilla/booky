@@ -63,7 +63,7 @@
 
    @forelse ($follow as $following_user)
 
-   <p> <a style="color:black; font-weight:bolder"  href="/normalProfile/{{$follower->user->id}}">{{$following_user->user->name}}</a></p>
+   <p> <a style="color:black; font-weight:bolder"  href="/normalProfile/{{$follower->user->id}}">{{$follower->user->name}}</a></p>
 
    @empty
    <p> No sigues a nadie</p>
