@@ -73,7 +73,9 @@ class UserController extends Controller
 
       $user = User::find($id);
       $follow=Follow::where("target_id","=",$user->id)->get();
-      $following=Follow::where("id","=","$id")->get();
+      $following=Follow::where("user_id","=",$usuarioLog["id"] )
+->join('users', 'users.id', '=', 'follows.target_id')
+->select('follows.*','users.*')->get();
       $userBooks = Book::where('user_id', '=', $id)->get();
       $usuarioLog=Auth::user();
 
