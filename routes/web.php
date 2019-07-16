@@ -66,7 +66,7 @@ Route::get('/resultadoLibros', function(){
 Route::get('/editProfile',  function(){
 return view ('editProfile');
 });
-Route::post('/editProfile', 'userController@edit');
+Route::post('/editProfile', 'UserController@edit');
 
 
 
