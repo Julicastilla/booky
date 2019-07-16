@@ -61,9 +61,9 @@
    <span class="close1">&times;</span>
    <h1>lista de seguidos</h1>
 
-   @forelse ($following as $following_user)
+   @forelse ($follow as $following_user)
 
-   <p> <a style="color:black; font-weight:bolder"  href="/normalProfile/{{$follower->user->id}}">{{$follower->user->name}}</a></p>
+   <p> <a style="color:black; font-weight:bolder"  href="/normalProfile/{{$follower->user->id}}">{{$following_user->user->name}}</a></p>
 
    @empty
    <p> No sigues a nadie</p>
